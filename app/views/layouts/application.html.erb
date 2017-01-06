@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Panoply Dispensary</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+
+  </head>
+
+  <body id="body_top">
+    <%= render 'layouts/navbar' %>
+
+    <% unless flash[:alert].nil? %>
+        <div class="alert alert-danger fade-in"><%= flash[:alert] %></div>
+    <% end %>
+
+    <div class="container">
+
+
+    <%= yield %>
+    </div>
+
+  <%= render 'layouts/footer' %>
+  </body>
+</html>
