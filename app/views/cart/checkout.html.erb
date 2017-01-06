@@ -25,7 +25,7 @@
 <h5>Order Tax: <%= number_to_currency @order.sales_tax %></h5>
 <h3>Order Total <%= number_to_currency @order.grand_total %> </h3>
 
-<%= button_to "Empty Cart", @order, method: :delete, data: {confirm: "Are you sure", style: 'display:inline-block;'} %>
+<%= button_to "Empty Cart", @order, method: :delete, data: {confirm: "Are you sure"}, class: "btn btn-danger btn-sm", form: {style: 'display:inline-block;'} %>
 
 <div style = 'display:inline-block;'>
     <%= form_tag order_complete_path do %>
